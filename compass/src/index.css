@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --forest: #1A3C2E;
+  --forest-light: #234D3C;
+  --forest-dark: #0F2319;
+  --gold: #D4A017;
+  --gold-light: #E8B84B;
+  --gold-muted: #A87C10;
+  --cream: #FAF6EF;
+  --cream-dark: #F0E9DC;
+  --ink: #0D1F17;
+  --muted: #6B8C7A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--forest); border-radius: 3px; }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--cream);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 2px;
+  border: 1.5px solid rgba(250,246,239,0.5);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-outline:hover { background: var(--cream); color: var(--forest); border-color: var(--cream); }
+
+.tag {
+  display: inline-block;
+  background: var(--forest-light);
+  color: var(--gold-light);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+}
