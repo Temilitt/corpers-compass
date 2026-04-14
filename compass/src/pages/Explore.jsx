@@ -309,9 +309,9 @@ export default function Explore() {
                   : "Try a different search term or filter."}
               </p>
               {reviews.length === 0 && (
-                <a href="/submit" className="btn-gold" style={{ fontSize: "0.9rem" }}>
+                <Link to="/submit" className="btn-gold">
                   Drop a Review →
-                </a>
+                </Link>
               )}
             </div>
           ) : (
@@ -329,12 +329,12 @@ export default function Explore() {
                 alignItems: "center",
               }}>
                 <span>{filtered.length} of {reviews.length} review{reviews.length !== 1 ? "s" : ""}</span>
-                <a href="/submit" style={{
+                <Link to="/submit" style={{
                   fontSize: "0.8rem",
                   color: "var(--gold-muted)",
                   textDecoration: "none",
                   fontWeight: 600,
-                }}>+ Add yours</a>
+                }}>+ Add yours</Link>
               </div>
               {filtered.map(r => <ReviewCard key={r.id} review={r} />)}
             </div>
